@@ -74,11 +74,6 @@ jobs:
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
-
-    - name: 编译po2lmo
-      run: |
-        cd openwrt/feeds/wx940703/luci-app-openclash/tools/po2lmo
-        make && sudo make install
         
     - name: Compile the firmware
       id: compile
